@@ -31,9 +31,9 @@
   --color-light-silver: color(var(--color-base-black) h(+3) s(23%) l(67%));
   --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
 
-  --color-base-gray: color(var(--color-base-black) s(28%) l(86%));
-  --color-light-gray: color(var(--color-base-black) h(+10) s(33%) l(92%));
-  --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
+  --color-base-gray: #939FB8;
+  --color-light-gray: #BFC7D9;
+  --color-extra-light-gray: #DFE4ED;
 
   /* Link
   -------------------------- */
@@ -397,7 +397,7 @@
 
   /* Dialog
  -------------------------- */
-  --dialog-background-color: var(--color-secondary);
+  --dialog-background-color: linear-gradient(#462882 30%,#080938 70%);
   --dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   --dialog-tiny-width: 30%;
   --dialog-small-width: 50%;
