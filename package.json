@@ -1,6 +1,6 @@
 {
   "name": "element-theme-owl",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Element component default theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
@@ -17,9 +17,10 @@
   },
   "keywords": [
     "element",
+    "owl",
     "theme"
   ],
-  "author": "haiping.zeng <qingwei.li@ele.me>",
+  "author": "JJ <jj@junnnnj.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ElementUI/theme-default/issues"
