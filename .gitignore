@@ -24,8 +24,8 @@ npm-debug*
 /lib/dropdown-item.css
 /lib/dropdown-menu.css
 /lib/dropdown.css
-/lib/fonts/element-icons.ttf
-/lib/fonts/element-icons.woff
+# /lib/fonts/element-icons.ttf
+# /lib/fonts/element-icons.woff
 /lib/form-item.css
 /lib/form.css
 /lib/icon.css
