@@ -1,7 +1,7 @@
 {
   "name": "element-theme-owl",
-  "version": "0.0.1",
-  "description": "Element component default theme.",
+  "version": "0.0.9",
+  "description": "Element component OWL theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
   "files": [
@@ -13,16 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElementUI/theme-default.git"
+    "url": "git+https://github.com/design-team-cepave/element-theme-owl.git"
   },
   "keywords": [
     "element",
     "theme"
   ],
-  "author": "haiping.zeng <qingwei.li@ele.me>",
+  "author": "JJ <jj@cepave.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ElementUI/theme-default/issues"
+    "url": "https://github.com/design-team-cepave/element-theme-owl/issues"
   },
   "homepage": "https://github.com/ElementUI/theme-default#readme",
   "devDependencies": {
