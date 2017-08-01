@@ -1,6 +1,6 @@
 {
   "name": "element-theme-owl",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Element component OWL theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
@@ -13,17 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jerrysdesign/theme-owl.git"
+    "url": "git+https://github.com/design-team-cepave/element-theme-owl.git"
   },
   "keywords": [
     "element",
     "owl",
     "theme"
   ],
-  "author": "JJ <jj@junnnnj.com>",
+  "author": "JJ <jj@cepave.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jerrysdesign/theme-owl/issues"
+    "url": "https://github.com/design-team-cepave/element-theme-owl/issues"
   },
   "homepage": "",
   "devDependencies": {
