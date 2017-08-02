@@ -1,6 +1,6 @@
 {
   "name": "element-theme-owl",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Element component OWL theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
