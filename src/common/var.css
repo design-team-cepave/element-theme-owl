@@ -11,7 +11,9 @@
 
   /* Colors
   -------------------------- */
-  --color-primary : #6B49AA;
+  --color-primary       : #8F73DA;
+  --color-primary-light : #C2AAF3;
+  --color-primary-dark  : #6B49AA;
 
   --color-success : #13CE66;
   --color-warning : #F7BA2A;
@@ -21,7 +23,7 @@
   --color-secondary: color(var(--color-primary) s(99%) l(*0.9));
   --color-white: #fff;
   --color-dark-white: color(var(--color-white) blend(var(--color-primary) 2%));
-  --color-black: #000;
+  --color-black: #192232;
 
   --color-base-black: color(var(--color-primary) h(+6) s(33%) l(18%));
   --color-light-black: color(var(--color-base-black) h(+5) s(27%) l(27%));
