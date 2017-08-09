@@ -15,6 +15,8 @@
   --color-primary-light : #C2AAF3;
   --color-primary-dark  : #6B49AA;
 
+  --color-turquoise     : #5CE0C5;
+
   --color-success : #13CE66;
   --color-warning : #F7BA2A;
   --color-danger  : #FF4949;
@@ -527,6 +529,8 @@
 
   /* Menu
   --------------------------*/
+  --menu-item-width: 56px;
+  --menu-item-height: var(--menu-item-width);
   --menu-item-color: var(--link-color);
   --menu-item-fill: var(--color-extra-light-gray);
   --menu-item-hover-fill: var(--disabled-border-base);
