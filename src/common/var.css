@@ -532,8 +532,8 @@
   --menu-item-hover-fill: var(--disabled-border-base);
 
   --dark-menu-item-color: var(--link-color);
-  --dark-menu-item-fill: var(--color-light-black);
-  --dark-menu-item-hover-fill: var(--link-color);
+  --dark-menu-item-fill: var(--color-primary-dark);
+  --dark-menu-item-hover-fill: rgba(var(--color-black), .2);
 
   /* Rate
   --------------------------*/

@@ -36,15 +36,15 @@
         color: var(--color-extra-light-silver);
 
         &:hover {
-          background-color: var(--color-extra-light-black);
+          background-color: var(--dark-menu-item-hover-fill);
         }
       }
       
       & .el-submenu .el-menu {
-        background-color: var(--color-base-black);
+        background-color: var(--dark-menu-item-hover-fill);
 
         & .el-menu-item:hover {
-          background-color: var(--color-extra-light-black);
+          background-color: var(--dark-menu-item-hover-fill);
         }
       }
     }
