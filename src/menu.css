@@ -40,7 +40,7 @@
           background-color: var(--dark-menu-item-hover-fill);
         }
       }
-      
+
       & .el-submenu .el-menu {
         background-color: var(--dark-menu-item-fill);
 
@@ -165,7 +165,7 @@
         & .el-menu {
           position: absolute;
           margin-left: 5px;
-          top: 0;
+          bottom: 0;
           left: 100%;
           z-index: 10;
         }
@@ -180,7 +180,7 @@
   }
   @b menu-item {
     @extend menu-item;
-    
+
     & [class^="el-icon-"] {
       vertical-align: baseline;
       margin-right: 10px;
@@ -205,7 +205,7 @@
         height: 100%;
         position: absolute;
         left: 0;
-        top: 0;
+        bottom: 0;
         background-color: var(--color-turquoise);
       }
       svg {
@@ -213,7 +213,7 @@
       }
     }
   }
-  
+
   @b submenu {
     @e title {
       position: relative;
