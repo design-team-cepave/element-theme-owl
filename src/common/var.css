@@ -39,7 +39,7 @@
   --color-light-gray: #BFC7D9;
   --color-lighter-gray: #DFE4ED;
   --color-lightest-gray: #F2F4F7;
-  --color-extra-light-gray: --color-lightest-gray;
+  --color-extra-light-gray: var(--color-lightest-gray);
 
   /* Link
   -------------------------- */
