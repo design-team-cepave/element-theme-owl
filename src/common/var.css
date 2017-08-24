@@ -37,7 +37,9 @@
 
   --color-base-gray: #939FB8;
   --color-light-gray: #BFC7D9;
-  --color-extra-light-gray: #DFE4ED;
+  --color-lighter-gray: #DFE4ED;
+  --color-lightest-gray: #F2F4F7;
+  --color-extra-light-gray: --color-lightest-gray;
 
   /* Link
   -------------------------- */
