@@ -48,8 +48,8 @@
   -------------------------- */
   --border-width-base: 1px;
   --border-style-base: solid;
-  --border-color-base: var(--color-extra-light-silver);
-  --border-color-hover: var(--color-base-silver);
+  --border-color-base: var(--color-light-gray);
+  --border-color-hover: var(--color-base-gray);
   --border-base: var(--border-width-base) var(--border-style-base) var(--border-color-base);
   --border-radius-base: 4px;
   --border-radius-small: 2px;
@@ -84,7 +84,7 @@
   -------------------------- */
   --disabled-fill-base: var(--color-extra-light-gray);
   --disabled-color-base: #bbb;
-  --disabled-border-base: var(--color-base-gray);
+  --disabled-border-base: var(--color-light-gray);
 
   /* Icon
   -------------------------- */
