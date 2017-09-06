@@ -27,7 +27,7 @@
   --color-dark-white: color(var(--color-white) blend(var(--color-primary) 2%));
   --color-black: #192232;
 
-  --color-base-black: color(var(--color-primary) h(+6) s(33%) l(18%));
+  --color-base-black: color(var(--color-primary) h(+6) s(15%) l(50%));
   --color-light-black: color(var(--color-base-black) h(+5) s(27%) l(27%));
   --color-extra-light-black: color(var(--color-base-black) h(+2) s(19%) l(35%));
 
