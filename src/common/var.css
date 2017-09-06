@@ -35,16 +35,19 @@
   --color-light-silver: color(var(--color-base-black) h(+3) s(23%) l(67%));
   --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
 
-  --color-base-gray: #939FB8;
-  --color-light-gray: #BFC7D9;
-  --color-lighter-gray: #DFE4ED;
-  --color-lightest-gray: #F2F4F7;
-  --color-extra-light-gray: var(--color-lightest-gray);
+  --color-darkeset-gray    : #192232;
+  --color-darker-gray      : #3A465C;
+  --color-dark-gray        : #6C7891;
+  --color-base-gray        : #939FB8;
+  --color-light-gray       : #BFC7D9;
+  --color-lighter-gray     : #DFE4ED;
+  --color-lightest-gray    : #F2F4F7;
+  --color-extra-light-gray : var(--color-lightest-gray);
 
   /* Link
   -------------------------- */
-  --link-color: var(--color-extra-light-black);
-  --link-hover-color: var(--color-primary);
+  --link-color: var(--color-primary);
+  --link-hover-color: var(--color-primary-dark);
 
   /* Border
   -------------------------- */
@@ -533,13 +536,15 @@
   --------------------------*/
   --menu-item-width: 56px;
   --menu-item-height: var(--menu-item-width);
-  --menu-item-color: var(--link-color);
-  --menu-item-fill: var(--color-extra-light-gray);
-  --menu-item-hover-fill: var(--disabled-border-base);
+  --menu-item-color: var(--color-dark-gray);
+  --menu-item-fill: var(--color-white);
+  --menu-item-hover-fill: var(--color-lighter-gray);
+  --menu-item-active-fill: var(--menu-item-hover-fill);
+  --menu-item-fill-submenu: var(--color-white);
 
-  --dark-menu-item-color: var(--link-color);
-  --dark-menu-item-fill: var(--color-primary-dark);
-  --dark-menu-item-hover-fill: rgba(var(--color-black), .2);
+  --dark-menu-item-color: var(--color-lighter-gray);
+  --dark-menu-item-fill: var(--color-darkeset-gray);
+  --dark-menu-item-hover-fill: rgba(var(--color-darkeset-gray), .1);
 
   /* Rate
   --------------------------*/
