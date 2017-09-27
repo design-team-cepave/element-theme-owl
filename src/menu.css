@@ -9,15 +9,36 @@
   padding: 0 20px;
   cursor: pointer;
   position: relative;
-  transition: border-color .3s, background-color .3s, color .3s;
+  transition: border-color .3s, background-color .3s, color .3s, box-shadow .3s;
   box-sizing: border-box;
   white-space: nowrap;
-  user-select: none;
 }
+
+@define-extend menu-item-active-horizontal {
+  box-shadow: inset 0 -5px 0 var(--color-primary);
+}
+@define-extend menu-item-active-vertical {
+  box-shadow: inset 4px 0 0 var(--color-primary);
+}
+@define-mixin menu-item-vertical {
+  box-shadow: inset 4px 0 0 var(--color-extra-light-black);
+}
+
+/*
+.el-menu
+  &--dark
+  &--horizontal
+  &--vertical
+  .el-menu-item
+    &.is-active
+    >.el-submenu
+      &.is-open
+      &.is-active
+*/
 
 @component-namespace el {
   @b menu {
-    border-radius: 2px;
+    border-radius: var(--menu-radius);
     list-style: none;
     position: relative;
     margin: 0;
@@ -34,18 +55,18 @@
 
       & .el-menu-item,
       & .el-submenu__title {
-        color: var(--color-base-gray);
+        color: var(--color-extra-light-black);
 
         &:hover {
-          background-color: var(--dark-menu-item-hover-fill);
+          background-color: var(--color-extra-light-black);
         }
       }
-
+      
       & .el-submenu .el-menu {
-        background-color: var(--dark-menu-item-fill);
+        background-color: var(--color-base-black);
 
         & .el-menu-item:hover {
-          background-color: var(--dark-menu-item-hover-fill);
+          background-color: var(--color-extra-light-black);
         }
       }
     }
@@ -58,8 +79,6 @@
         cursor: pointer;
         position: relative;
         box-sizing: border-box;
-        border-bottom: 5px solid transparent;
-
         a,
         a:hover {
           color: inherit;
@@ -67,6 +86,11 @@
 
         &:hover {
           background-color: var(--menu-item-hover-fill);
+        }
+
+        &.is-active {
+          background-color: transparent;
+          @extend menu-item-active-horizontal;
         }
       }
       & .el-submenu {
@@ -77,7 +101,7 @@
           position: absolute;
           top: 65px;
           left: 0;
-          border: 1px solid var(--color-light-gray);
+          border:1px solid var(--color-base-gray);
           padding: 5px 0;
           background-color: var(--color-white);
           z-index: 100;
@@ -88,7 +112,7 @@
         & .el-submenu__title {
           height: 60px;
           line-height: 60px;
-          border-bottom: 5px solid transparent;
+          box-shadow: inset 0 -5px 0 transparent;
         }
 
         & .el-menu-item {
@@ -103,7 +127,7 @@
           position: static;
           vertical-align: middle;
           margin-left: 5px;
-          color: var(--color-base-gray);
+          color: var(--color-light-silver);
           margin-top: -3px;
         }
       }
@@ -114,7 +138,7 @@
       & > .el-menu-item:hover,
       & > .el-submenu:hover .el-submenu__title,
       & > .el-submenu.is-active .el-submenu__title {
-        border-bottom: 5px solid var(--color-primary);
+        @extend menu-item-active-horizontal;
       }
 
       &.el-menu--dark {
@@ -126,18 +150,21 @@
         & .el-submenu {
           .el-menu-item,
           .el-submenu-title {
-            color: var(--color-base-gray);
+            color: var(--color-extra-light-black);
 
             &:hover {
-              background-color: var(--color-lighter-gray);
+              background-color: var(--color-base-gray);
             }
           }
           .el-menu-item.is-active {
             color: var(--color-primary);
+            @extend menu-item-active-horizontal;
           }
         }
       }
     }
+
+    /* 收合狀態 */
     @m collapse {
       width: 64px;
 
@@ -160,32 +187,50 @@
           display: inline-block;
         }
       }
-
       .el-submenu {
         position: relative;
+
         & .el-menu {
           position: absolute;
           margin-left: 5px;
-          bottom: 0;
+          top: 0;
           left: 100%;
           z-index: 10;
         }
 
         &.is-opened {
-          > .el-submenu__title .el-submenu__icon-arrow {
+          .el-submenu__title .el-submenu__icon-arrow {
             transform: none;
+          }
+          .el-menu {
+            box-shadow: var(--box-shadow-base);
+            background-color: var(--white);
+          }
+          & .el-menu-item {
+            box-shadow: inset 4px 0 0 transparent;
+            &:hover {
+              box-shadow: inset 4px 0 0 transparent;
+            }
           }
         }
       }
     }
   }
+
+  /* 不分各種狀態，共用 .el-menu-item */
   @b menu-item {
     @extend menu-item;
-
+    &:hover {
+      background-color: var(--color-base-gray);
+    }
+    
     & [class^="el-icon-"] {
-      margin-right: 5px;
+      margin-right: 8px;
       width: 24px;
       text-align: center;
+      &:before {
+        font-size: 16px;
+      }
     }
     & * {
       vertical-align: middle;
@@ -197,35 +242,22 @@
       margin-right: 0;
     }
     &:hover {
-      background-color: var(--dark-menu-item-hover-fill);
+      background-color: var(--color-base-gray);
     }
     @when active {
       color: var(--color-primary);
-      background-color: var(--menu-item-active-fill);
-      position: relative;
-      &:before {
-        content: '';
-        display: block;
-        width: 4px;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: var(--color-primary);
-      }
-      svg {
-        opacity: 1;
-      }
+      background-color: var(--color-base-gray);
     }
   }
-
+  
   @b submenu {
     @e title {
       position: relative;
+      background-color: transparent;
       @extend menu-item;
 
       &:hover {
-        background-color: var(--menu-item-fill-submenu);
+        background-color: var(--color-base-gray);
       }
 
       & * {
@@ -233,16 +265,15 @@
       }
     }
     & .el-menu {
-      background-color: var(--menu-item-fill-submenu);
+      background-color: var(--menu-item-fill);
     }
     & .el-menu-item {
       height: 50px;
       line-height: 50px;
       padding: 0 45px;
       min-width: 200px;
-
       &:hover {
-        background-color: var(--menu-item-hover-fill);
+        background-color: var(--color-base-gray);
       }
     }
     @e icon-arrow {
@@ -253,21 +284,69 @@
       transition: transform .3s;
       font-size: 12px;
     }
+    
+    /* 當子項目含有 .is-active 會在 .el-submenu 都會加疊 .is-active */
+    /* @when ==> is- */
     @when active {
-      .el-submenu__title {
-        border-bottom-color: var(--color-primary);
+
+      & .el-submenu__title {
+        @mixin menu-item-vertical;
+        &:hover {
+          background-color: var(--color-base-gray);
+          @mixin menu-item-vertical;
+        }
+      }
+    
+      & .el-menu-item {
+        @when active {
+          background-color: var(--color-base-gray);
+          box-shadow: inset 4px 0 0 var(--color-primary);
+          &:hover {
+            background-color: var(--color-base-gray);
+            box-shadow: inset 4px 0 0 var(--color-primary);
+          }
+        }
       }
     }
+
+    /*  不論收和與展開觸發 .el-submenu 都會加疊 .is-opened */
     @when opened {
+      
+      @mixin menu-item-vertical;
+
+      .el-submenu__title {
+        
+        &:hover {
+          background-color: var(--color-base-gray);
+          @mixin menu-item-vertical;
+        }
+      }
+
+      & .el-menu {
+        background-color: transparent;
+      }
+
+      & .el-menu-item {
+        @mixin menu-item-vertical;
+        background-color: transparent;
+        &:hover {
+          @mixin menu-item-vertical;
+          background-color: var(--color-base-gray);
+        }
+      }
+
       > .el-submenu__title .el-submenu__icon-arrow {
         transform: rotateZ(180deg);
       }
     }
     [class^="el-icon-"] {
       vertical-align: middle;
-      margin-right: 5px;
+      margin-right: 8px;
       width: 24px;
       text-align: center;
+      &:before {
+        font-size: 16px;
+      }
     }
   }
 
@@ -280,7 +359,7 @@
       line-height: normal;
       font-size: 14px;
       padding-left: 20px;
-      color: var(--color-base-gray);
+      color: var(--color-light-silver);
     }
   }
 }
