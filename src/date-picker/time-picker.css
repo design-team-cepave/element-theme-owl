@@ -3,7 +3,7 @@
 @component-namespace el {
   @b time-panel {
     margin: 5px 0;
-    border: solid 1px #BFC7D9;
+    border: solid 1px var(--datepicker-border-color);
     background-color: var(--color-white);
     box-shadow: var(--box-shadow-base);
     border-radius: 2px;

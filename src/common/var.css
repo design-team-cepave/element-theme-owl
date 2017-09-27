@@ -15,46 +15,60 @@
   --color-primary-light : #C2AAF3;
   --color-primary-dark  : #6B49AA;
 
-  --color-turquoise     : #5CE0C5;
-
   --color-success : #13CE66;
   --color-warning : #F7BA2A;
   --color-danger  : #FF4949;
   --color-info    : #1F9BF7;
 
-  --color-secondary: color(var(--color-primary) s(99%) l(*0.9));
-  --color-white: #fff;
-  --color-dark-white: color(var(--color-white) blend(var(--color-primary) 2%));
-  --color-black: #192232;
+  --color-secondary          : color(var(--color-primary-dark) s(75%) l(*.5));
+  --color-turquoise          : #5CE0C5;
+  --color-white              : #fff;
+  --color-dark-white         : #F2F4F7;
+  --color-black              : #192232;
 
-  --color-base-black: color(var(--color-primary) h(+6) s(15%) l(50%));
-  --color-light-black: color(var(--color-base-black) h(+5) s(27%) l(27%));
-  --color-extra-light-black: color(var(--color-base-black) h(+2) s(19%) l(35%));
+  --color-gray-darkeset      : #192232;
+  /*--black                  : #1f2d3d;*/
+  /*--light-black            : #324057;*/
+  --color-gray-darker        : #3a465c;      
+  /*--extra-light-black      : #475669;*/
+  --color-gray-dark          : #6c7891;
+  /*--silver                 : #8492a6;*/
+  --color-gray-base          : #939fb8;
+  /*--light-silver           : #99a9bf;*/
+  --color-gray-light         : #bfc7d9;
+  /*--extra-light-silver     : #c0ccda;*/
+  /*--gray                   : #d3dce6;*/
+  --color-gray-lighter       : #dfe4ed;
+  /*--light-gray             : #e5e9f2;*/
+  /*--extra-light-gray       : #eff2f7;*/
+  --color-gray-lightest      : #f2f4f7;
+  /*--dark-white             : #f9fafc;*/
 
-  --color-base-silver: color(var(--color-base-black) h(+3) s(16%) l(58%));
-  --color-light-silver: color(var(--color-base-black) h(+3) s(23%) l(67%));
-  --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
+  --white                    : #ffffff;
 
-  --color-darkeset-gray    : #192232;
-  --color-darker-gray      : #3A465C;
-  --color-dark-gray        : #6C7891;
-  --color-base-gray        : #939FB8;
-  --color-light-gray       : #BFC7D9;
-  --color-lighter-gray     : #DFE4ED;
-  --color-lightest-gray    : #F2F4F7;
-  --color-extra-light-gray : var(--color-lightest-gray);
+  --color-base-black         : var(--color-gray-darkeset);
+  --color-light-black        : var(--color-gray-darker);
+  --color-extra-light-black  : var(--color-gray-dark);
+
+  --color-base-silver        : var(--color-gray-base);
+  --color-light-silver       : var(--color-gray-base);
+  --color-extra-light-silver : var(--color-gray-light);
+  
+  --color-base-gray          : var(--color-gray-light);
+  --color-light-gray         : var(--color-gray-lighter);
+  --color-extra-light-gray   : var(--color-gray-lightest);
 
   /* Link
   -------------------------- */
-  --link-color: var(--color-primary);
-  --link-hover-color: var(--color-primary-dark);
+  --link-color: var(--color-extra-light-black);
+  --link-hover-color: var(--color-primary);
 
   /* Border
   -------------------------- */
   --border-width-base: 1px;
   --border-style-base: solid;
-  --border-color-base: var(--color-light-gray);
-  --border-color-hover: var(--color-base-gray);
+  --border-color-base: var(--color-extra-light-silver);
+  --border-color-hover: var(--color-light-silver);
   --border-base: var(--border-width-base) var(--border-style-base) var(--border-color-base);
   --border-radius-base: 4px;
   --border-radius-small: 2px;
@@ -62,6 +76,7 @@
 
   /* Box-shadow
   -------------------------- */
+  --box-shadow-rest: none;
   --box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
   --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
 
@@ -72,7 +87,7 @@
   /* Font
   -------------------------- */
   --font-size-base: 14px;
-  --font-color-base: var(--color-base-black);
+  --font-color-base: var(--color-extra-light-black);
   --font-color-disabled-base: #bbb;
 
   /* Size
@@ -87,9 +102,9 @@
 
   /* Disable base
   -------------------------- */
-  --disabled-fill-base: var(--color-extra-light-gray);
+  --disabled-fill-base: var(--color-base-gray);
   --disabled-color-base: #bbb;
-  --disabled-border-base: var(--color-light-gray);
+  --disabled-border-base: var(--color-extra-light-silver);
 
   /* Icon
   -------------------------- */
@@ -98,7 +113,7 @@
   /* Checkbox
   -------------------------- */
   --checkbox-font-size: 14px;
-  --checkbox-color: var(--color-base-black);
+  --checkbox-color: var(--color-extra-light-black);
   --checkbox-input-height: 18px;
   --checkbox-input-width: 18px;
   --checkbox-input-border-radius: var(--border-radius-base);
@@ -131,7 +146,7 @@
   /* Radio
   -------------------------- */
   --radio-font-size: 14px;
-  --radio-color: var(--color-base-black);
+  --radio-color: var(--color-extra-light-black);
   --radio-input-height: 18px;
   --radio-input-width: 18px;
   --radio-input-border-radius: var(--border-radius-circle);
@@ -182,6 +197,7 @@
   --select-option-hover-background: var(--color-light-gray);
   --select-option-selected: var(--color-primary);
   --select-option-selected-hover: shade(var(--color-primary), 0.12);
+  --select-option-hover-color         : var(--color-dark-gray);
 
   --select-group-color: #999;
   --select-group-height: 30px;
@@ -249,7 +265,7 @@
   --notification-font-size: var(--font-size-base);
   --notification-color: var(--border-color-hover);
   --notification-title-font-size: 16px;
-  --notification-title-color: var(--color-base-black);
+  --notification-title-color: var(--color-extra-light-black);
 
   --notification-close-color: var(--color-extra-light-silver);
   --notification-close-hover-color: var(--color-light-silver);
@@ -357,7 +373,7 @@
   --button-mini-padding-vertical: 4px;
   --button-mini-padding-horizontal: 4px;
 
-  --button-default-color: var(--color-base-black);
+  --button-default-color: var(--color-extra-light-black);
   --button-default-fill: var(--color-white);
   --button-default-border: #c4c4c4;
 
@@ -412,7 +428,7 @@
 
   /* Dialog
  -------------------------- */
-  --dialog-background-color: linear-gradient(#462882 30%,#080938 70%);
+  --dialog-background-color: var(--color-secondary);
   --dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   --dialog-tiny-width: 30%;
   --dialog-small-width: 50%;
@@ -425,7 +441,7 @@
   /* Table
  -------------------------- */
   --table-border-color: color(var(--border-color-base) h(-3) s(27%) l(90%));
-  --table-text-color: var(--color-base-black);
+  --table-text-color: var(--color-extra-light-black);
   --table-header-background: var(--color-extra-light-gray);
   --table-footer-background: var(--color-dark-white);
 
@@ -451,7 +467,7 @@
   --popover-arrow-size: 6px;
   --popover-padding: 10px;
   --popover-title-font-size: 13px;
-  --popover-title-color: var(--color-base-black);
+  --popover-title-color: var(--color-extra-light-black);
 
   /* Tooltip
   -------------------------- */
@@ -534,17 +550,27 @@
 
   /* Menu
   --------------------------*/
+  /*
+  --menu-item-color                : var(--link-color);
+  --menu-item-fill                 : var(--color-white);
+  --menu-item-hover-fill           : var(--disabled-border-base);
+  --menu-item-width                : 56px;
+  --menu-item-height               : var(--menu-item-width);
+  --menu-item-active-fill          : var(--menu-item-hover-fill);
+  */
+  
+  --menu-radius: 0;
   --menu-item-width: 56px;
-  --menu-item-height: var(--menu-item-width);
-  --menu-item-color: var(--color-dark-gray);
-  --menu-item-fill: var(--color-white);
-  --menu-item-hover-fill: var(--color-lighter-gray);
-  --menu-item-active-fill: var(--menu-item-hover-fill);
-  --menu-item-fill-submenu: var(--color-white);
+  --menu-item-active-line-width: 4px;
 
-  --dark-menu-item-color: var(--color-lighter-gray);
-  --dark-menu-item-fill: var(--color-darkeset-gray);
-  --dark-menu-item-hover-fill: rgba(var(--color-darkeset-gray), .1);
+  --menu-item-height: var(--menu-item-width);
+  --menu-item-color: var(--link-color);
+  --menu-item-fill: var(--color-white);
+  --menu-item-hover-fill: var(--disabled-border-base);
+
+  --dark-menu-item-color: var(--link-color);
+  --dark-menu-item-fill: var(--color-light-black);
+  --dark-menu-item-hover-fill: var(--link-color);
 
   /* Rate
   --------------------------*/
@@ -601,12 +627,12 @@
   --collapse-header-size: 13px;
   --collapse-content-fill: var(--color-dark-white);
   --collapse-content-size: 13px;
-  --collapse-content-color: var(--color-base-black);
+  --collapse-content-color: var(--color-extra-light-black);
 
   /* Transfer
   --------------------------*/
   --transfer-border-color: var(--color-base-gray);
-  --transfer-box-shadow: var(--box-shadow-base);
+  --transfer-box-shadow: var(--box-shadow-rest);
   --transfer-panel-width: 200px;
   --transfer-panel-header-height: 36px;
   --transfer-panel-header-background: var(--color-dark-white);
