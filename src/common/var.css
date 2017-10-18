@@ -18,10 +18,10 @@
   --color-success : #13CE66;
   --color-warning : #F7BA2A;
   --color-danger  : #FF4949;
-  --color-info    : #1F9BF7;
+  --color-info    : #20A0FF;
 
   --color-secondary          : color(var(--color-primary-dark) s(75%) l(*.5));
-  --color-turquoise          : #5CE0C5;
+  --color-turquoise          : #3de0c5;
   --color-white              : #fff;
   --color-dark-white         : #F2F4F7;
   --color-black              : #192232;
@@ -102,8 +102,8 @@
 
   /* Disable base
   -------------------------- */
-  --disabled-fill-base: var(--color-base-gray);
-  --disabled-color-base: #bbb;
+  --disabled-fill-base: var(--color-extra-light-gray);
+  --disabled-color-base: var(--color-light-gray);
   --disabled-border-base: var(--color-extra-light-silver);
 
   /* Icon

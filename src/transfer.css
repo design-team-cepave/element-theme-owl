@@ -8,6 +8,9 @@
 @component-namespace el {
   @b transfer {
     font-size: var(--font-size-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @e buttons {
       display: inline-block;
@@ -36,9 +39,10 @@
     box-shadow: var(--transfer-box-shadow);
     display: inline-block;
     vertical-align: middle;
-    width: var(--transfer-panel-width);
+    min-width: var(--transfer-panel-width);
     box-sizing: border-box;
     position: relative;
+    flex: 1;
 
     @e body {
       padding-bottom: var(--transfer-panel-footer-height);
